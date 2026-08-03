@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+      integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+      }
+      nav {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        display: flex;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        position: sticky;
+        top:10px;
+        z-index:1000;
+      }
+      ul {
+        display: flex;
+        gap: 40px;
+        color: white;
+        list-style: none;
+        align-items: center;
+        justify-content: center;
+      }
+      ul li {
+        gap: 20px;
+      }
+      a {
+        text-decoration: none;
+        font-size: 12px;
+        color: black;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .logo img {
+        height: 20px;
+        width: 20px;
+      }
+      .text {
+        background-color: #ffffff;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        color: black;
+      }
+      .text h4 {
+        font-size: 12px;
+        font-weight: 100;
+      }
+
+      .hero {
+        width: 100vw;
+        height: 100vh;
+        background-color: #F2F2F2;
+      }
+.hero2{
+        width: 100vw;
+        height: 100vh;
+        background-color: #FFFFFF;
+      }
+      .hero .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        width: 100%;
+        height: 50%;
+        background-color: #201e1e1f;
+}
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        height: 50%;
+
+
+      }
+      .hero .content h1 {
+        margin-top: 20px 0;
+        font-size: 40px;
+        font-weight: 600;
+      }
+      .hero .content a {
+        margin-top: 20px 0;
+        font-size: 20px;
+        font-weight: 100;
+        background-color: #0171e3;
+        color: white;
+        border-radius: 40px;
+        padding: 10px 20px;
+      }
+      .hero .content p {
+        text-align: center;
+
+        font-weight: 100;
+      }
+      .hero-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        width: 100%;
+        height: 50%;
+     
+      }
+      .hero2 .hero-content h1 {
+    
+        font-size: 5rem;
+        font-weight: 600;
+      }
+      .hero2 .hero-content p {
+        text-align: center;
+        font-weight: 100;
+      
+      
+      
+      }
+      .hero-content
+      .btn{
+        display: flex;
+        gap: 20px;
+
+        color: white;
+        border-radius: 40px;
+        padding: 10px 20px;
+        backdrop-filter: blur(10px);
+      }
+      button{
+        background-color: #0171e3;
+        color: white;
+        border-radius: 40px;
+        padding: 10px 20px;
+        border: none;
+      }
+      button a{
+        color: white;
+       
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <ul>
+          <li>
+            <a class="logo">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/0/747.png"
+                alt="Amazon Logo"
+                width="100"
+              />
+            </a>
+          </li>
+          <li><a href="">Store</a></li>
+          <li><a href="">Mac</a></li>
+          <li><a href="">iPad</a></li>
+          <li><a href="">iPhone</a></li>
+          <li><a href="">Watch</a></li>
+          <li><a href="">AirPods</a></li>
+          <li><a href="">TV & Home</a></li>
+          <li><a href="">Entertainment</a></li>
+          <li><a href="">Accessories</a></li>
+          <li><a href="">Support</a></li>
+
+          <li><i class="fa-solid fa-magnifying-glass"></i></li>
+          <li><i class="fa-solid fa-bag-shopping"></i></li>
+        </ul>
+      </nav>
+      <div class="text">
+        <h4>
+          Get up to 6 months of No Cost EMI* plus up to ₹15000 instant cashback‡
+          on selected products with eligible cards. <a href="">Shop Now</a>
+        </h4>
+      </div>
+    </div>
+    <div
+      class="hero"
+      style="
+        background-image: url(&quot; https://i.pinimg.com/1200x/a3/51/4d/a3514d9522b80994ceb3ac41d3efc0d8.jpg&quot;);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      "
+    >
+      <div class="content">
+        <h1>College, Sorted</h1>
+        <p>
+          Get AirPods with Mac and Apple Pencil with iPad
+          <br />
+          when you buy them together.
+        </p>
+
+        <a href="">Shop</a>
+
+      
+      </div>
+    </div>
+    <hr>
+
+    <div class="hero2" style="background-image: url('https://i.pinimg.com/1200x/9d/ea/62/9dea62e457a165c8741d876ebf05520a.jpg'); background-size:contain; background-position: center; background-repeat: no-repeat;">
+      <div class="hero-content">
+
+        <h1>IPhone</h1>
+        <p>Meet the latest iPhone lineup.</p>
+        <div class="btn">
+            <button><a href="">Learn More</a></button>
+            <button><a href="">Shop</a></button>
+         
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

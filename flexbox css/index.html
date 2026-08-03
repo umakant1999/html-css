@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Example</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial, sans-serif;
+        }
+
+        nav{
+            background-color:#75b3ff;
+            height:60px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .nav-links{
+            display:flex;
+            gap:40px;
+            list-style:none;
+        }
+
+        .nav-links a{
+            color:#fff;
+            text-decoration:none;
+            font-size:16px;
+        }
+
+        .nav-links a:hover{
+            text-decoration:underline;
+        }
+
+        .container{
+            width:20vw;
+            height:50vh;
+         
+            margin:20px;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .box{
+            width:200px;
+            height:200px;
+            background-color:#b2e41c;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="box"></div>
+    </div>
+
+</body>
+</html>
