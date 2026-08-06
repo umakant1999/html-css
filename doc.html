@@ -1,106 +1,108 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glass Sidebar</title>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <style>
-        *{
+
+<style>
+*{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:Arial,sans-serif;
 }
 
+body{
+    background:url("https://i.pinimg.com/736x/cc/96/9c/cc969cd64290f51bed1d6e853b539d69.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+}
+
+.wrapper{
+    display:flex;
+    min-height:100vh;
+}
+
+/* Sidebar */
 nav{
     width:220px;
-    height:100vh;
-    background:#000;
+    background:rgba(20,20,20,.35);   /* transparent */
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    border-right:1px solid rgba(255,255,255,.15);
 }
 
 ul{
     list-style:none;
-    display:flex;
-    flex-direction:column;
     padding-top:20px;
 }
 
 li{
-    margin:10px 0;
+    margin:8px 0;
 }
 
 a{
     display:flex;
     align-items:center;
     gap:15px;
-    color:white;
+    padding:14px 20px;
+    color:#fff;
     text-decoration:none;
-    padding:12px 20px;
-    transition:.3s;
 }
 
 a:hover{
-    background:#333;
+    background:rgba(255,255,255,.12);
 }
 
 i{
-    font-size:20px;
     width:25px;
     text-align:center;
 }
 
-span{
-    font-size:18px;
+/* Main */
+main{
+    flex:1;
+    padding:40px;
+    color:#fff;
 }
-.wrapper{
-    display: flex;
-    
+
+.content{
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    padding:30px;
+    border-radius:16px;
+    border:1px solid rgba(255,255,255,.2);
+    max-width:700px;
 }
-    </style>
+
+h1{
+    margin-bottom:15px;
+}
+</style>
 </head>
 <body>
-    <div class="wrapper">
-    <nav>
-  <ul>
-    <li>
-      <a href="#">
-        <i class="fa-solid fa-house"></i>
-        <span>Home</span>
-      </a>
-    </li>
 
-    <li>
-      <a href="#">
-        <i class="fa-solid fa-address-book"></i>
-        <span>Contact</span>
-      </a>
-    </li>
+<div class="wrapper">
 
-    <li>
-      <a href="#">
-        <i class="fa-solid fa-circle-info"></i>
-        <span>About</span>
-      </a>
-    </li>
-
-    <li>
-      <a href="#">
-        <i class="fa-solid fa-circle-question"></i>
-        <span>Help</span>
-      </a>
-    </li>
-  </ul>
+<nav>
+    <ul>
+        <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
+        <li><a href="#"><i class="fa-solid fa-user"></i>Profile</a></li>
+        <li><a href="#"><i class="fa-solid fa-gear"></i>Settings</a></li>
+        <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+    </ul>
 </nav>
 
 <main>
-    <div class="content">
-        <h1>about</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus in odio illo praesentium autem totam exercitationem odit! Itaque dicta quae praesentium eum tenetur. Velit magnam, deleniti eaque odit id praesentium?</p>
-    </div>
+   
 </main>
+
 </div>
+
 </body>
 </html>
-

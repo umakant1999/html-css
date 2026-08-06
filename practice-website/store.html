@@ -72,7 +72,7 @@
         display: flex;
         width: 100vw;
         height: auto;
-        gap: 20px;
+        gap: 40px;
 
         align-items: center;
         justify-content: center;
@@ -132,11 +132,20 @@
       .card {
         border-radius: 20px;
         cursor: pointer;
+        transition: .75s all ;
+      }
+      .card:hover{
+        scale: .75;
       }
 
       .container-card {
         color: white;
         padding: 28px;
+        transition: .85s ease-in-out  ;
+      }
+      .container-card:hover{
+        scale: .75;
+        cursor: pointer;
       }
 
       .container-card h3 {
