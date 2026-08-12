@@ -1,108 +1,216 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Glass Sidebar</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+      integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+      }
+      nav {
+        background-color: #ffffff;
+        height: 60px;
+        display: flex;
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
-}
+        position: sticky;
+        top: 0px;
+        box-shadow:
+          0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-body{
-    background:url("https://i.pinimg.com/736x/cc/96/9c/cc969cd64290f51bed1d6e853b539d69.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height:100vh;
-}
+        z-index: 1000;
+      }
+      nav .logo {
+        width: 100px;
+        height: auto;
+      }
 
-.wrapper{
-    display:flex;
-    min-height:100vh;
-}
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        transition:
+          background-color,
+          padding,
+          border-radius,
+          0.2s ease-in-out;
+        color: black;
+        transition: color all 0.4s ease-in-out;
+      }
+      a:hover {
+        scale: 1.2;
+      }
+      i {
+        font-size: 1.6rem;
+        transition:
+          background-color,
+          padding,
+          border-radius,
+          0.2s ease-in-out;
+        color: black;
+        transition: color all 0.4s ease-in-out;
+      }
+      i:hover {
+        cursor: pointer;
+        scale: 1.1;
+      }
 
-/* Sidebar */
-nav{
-    width:220px;
-    background:rgba(20,20,20,.35);   /* transparent */
-    backdrop-filter:blur(20px);
-    -webkit-backdrop-filter:blur(20px);
-    border-right:1px solid rgba(255,255,255,.15);
-}
+      section {
+        width: 100vw;
+        overflow: hidden;
+        position: relative;
+      }
+      section img {
+        width: 100%;
+      }
 
-ul{
-    list-style:none;
-    padding-top:20px;
-}
+      .box {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 10px 0px 10px;
+      }
 
-li{
-    margin:8px 0;
-}
+      section .hero-content {
+        width: 100%;
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+      }
+      section .hero-content h1 {
+        font-size: 4rem;
+        color: white;
+        border: none;
+      }
+      section .hero-content p {
+        margin-bottom: 10px;
+        font-size: 1rem;
+        color: white;
+        border: none;
+      }
 
-a{
-    display:flex;
-    align-items:center;
-    gap:15px;
-    padding:14px 20px;
-    color:#fff;
-    text-decoration:none;
-}
+      section .hero-content button {
+        padding: 10px 20px 10px 20px;
+        background-color: #3d6ae1;
+        color: white;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <div class="logo">
+          <svg
+            class="tds-icon tds-icon-logo-wordmark tds-site-logo-icon"
+            viewBox="0 0 342 35"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill="currentColor"
+              d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7m0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7m0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7M308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7"
+            ></path>
+          </svg>
+        </div>
 
-a:hover{
-    background:rgba(255,255,255,.12);
-}
+        <ul>
+          <li>
+            <a href="">Vechile</a>
+          </li>
 
-i{
-    width:25px;
-    text-align:center;
-}
+          <li>
+            <a href="">Energy</a>
+          </li>
 
-/* Main */
-main{
-    flex:1;
-    padding:40px;
-    color:#fff;
-}
+          <li>
+            <a href="">charging</a>
+          </li>
+          <li>
+            <a href="">discover</a>
+          </li>
+        </ul>
 
-.content{
-    background:rgba(255,255,255,.15);
-    backdrop-filter:blur(20px);
-    -webkit-backdrop-filter:blur(20px);
-    padding:30px;
-    border-radius:16px;
-    border:1px solid rgba(255,255,255,.2);
-    max-width:700px;
-}
+        <div class="btn">
+          <i class="fa-solid fa-earth-asia"></i>
+          <i class="fa-solid fa-circle-user"></i>
+          <i class="fa-solid fa-circle-info"></i>
+        </div>
+      </nav>
 
-h1{
-    margin-bottom:15px;
-}
-</style>
-</head>
-<body>
+      <section>
+        <div class="hero-content">
+          <h1>Model Y</h1>
+          <p>Starting at...</p>
+          <div class="btn">
+            <button>Order Now</button>
+            <button>Demo Drive</button>
+          </div>
+        </div>
+        <img
+          src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Promo-Model-Y-L-Seats-Desktop-AU-NZ.jpg"
+          alt=""
+        />
+        <div class="box">
+          <i class="fa-solid fa-backward"></i>
+          <i class="fa-solid fa-forward"></i>
+        </div>
+      </section>
 
-<div class="wrapper">
+      <section style="display: flex;">
+       
+    
+        <img
+        style="flex: 1;"
+          src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Promo-Model-Y-L-Seats-Desktop-AU-NZ.jpg"
+          alt=""
+        />
 
-<nav>
-    <ul>
-        <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
-        <li><a href="#"><i class="fa-solid fa-user"></i>Profile</a></li>
-        <li><a href="#"><i class="fa-solid fa-gear"></i>Settings</a></li>
-        <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
-    </ul>
-</nav>
+         <img
+          style="flex: 1;"
+          src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Promo-Model-Y-L-Seats-Desktop-AU-NZ.jpg"
+          alt=""
+        />
+        
+      </section>
+    </main>
 
-<main>
-   
-</main>
-
-</div>
-
-</body>
+    <footer>
+      <p>
+        Tesla © 2026 Privacy & Legal Vehicle Recalls Contact News Get Updates
+        Locations Learn
+      </p>
+    </footer>
+  </body>
 </html>

@@ -1,11 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background: black;
+        }
+
+        .on {
+            background: rgb(8, 188, 219);
+        }
+    </style>
 </head>
+
 <body>
-    <script src="script.js"></script>
+
+    <button id="btn">OFF</button>
+
+    <div class="box"></div>
+
+    <script>
+        const btn = document.querySelector("#btn");
+        const box = document.querySelector(".box");
+
+        let isOn = false;
+
+        btn.addEventListener("click", () => {
+
+            isOn = !isOn;
+
+            if (isOn) {
+                btn.textContent = "ON";
+                box.classList.add("on");
+            } else {
+                btn.textContent = "OFF";
+                box.classList.remove("on");
+            }
+
+        });
+    </script>
+
 </body>
 </html>

@@ -1,62 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <style>
-        .container{
-            width: 400px;
-            height: 400px;
-            background-color: aquamarine;
-            display: flex;
-          
-       
-        }
-        .box1{
-            background-color: blueviolet;
-            flex: 1;
-     
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Circle Cut Button</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        }
-        .box2{
-            background-color: chocolate;
-            flex: 1;
-        }
-        button
-        {
-            position: relative;
-             padding: 10px 15px;
-    font-size: 20px;
-    cursor: pointer;
-        }
-        span
-        {
-            position: absolute;
-            top: -4px;
-            left: 0;
-            right: 1px;
-           
-        
-        }
-    </style>
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f2f2f2;
+}
+
+button{
+    position:relative;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:100px;
+    background:#3d6ae1;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    transition: box-shadow 0.2s ease-in-out ,background-color 0.2s ease-in-out;
+}
+button:hover{
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.513);
+    background-color:rgb(45, 45, 186)
+}
+div1{
+    display: flex;
+    width: 600px;
+    align-items: center;
+    background-color: rgb(247, 244, 242);
+    justify-content: space-between;
+    padding: 20PX;
+    border-radius: 50PX;
+     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.513);
+     gap: 20px;
+}
+input{
+    padding: 20px;
+    flex: 1;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+      background-color: rgb(247, 244, 242);
+}
+input:focus{
+   
+    box-shadow:0 0 0 4px rgba(61,106,225,.15);
+
+}
+
+h1{
+    width: 0.2em;;
+    font-size: 2em;
+}
+
+.box{
+    background-color: #3d6ae1;
+    width: 100px;
+    height: 100px;
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="box1">
-           <button>
-        <i class="fa-solid fa-cart-shopping"></i>
-          <span>0</span>
-    </button>
-        </div>
-          <div class="box2">
-           <button>
-        <i class="fa-solid fa-cart-shopping"></i>
-        <span>0</span>
-    </button>
-        </div>
-    </div>
+<div style="display: none;">
+  <input type="text" name="" id="" placeholder="Add Task">
+<button><i class="fa-solid fa-plus"></i></button>
+</div>
+
+<div class="box">
+
+    <h1>hello</h1>
+</div>
+
 </body>
 </html>
