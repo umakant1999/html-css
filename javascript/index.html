@@ -1,45 +1,191 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        .box {
-            width: 200px;
-            height: 200px;
-            background: black;
-        }
+  <title>Music Player</title>
 
-        .on {
-            background: rgb(8, 188, 219);
-        }
-    </style>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #eee;
+      font-family: Arial, sans-serif;
+    }
+
+    .player {
+      width: 350px;
+      height: 450px;
+
+      min-width: 300px;
+      max-width: 600px;
+
+      background: #111;
+      color: white;
+
+      border-radius: 25px;
+      padding: 20px;
+
+      /* Only X-axis resize */
+      resize: horizontal;
+      overflow: auto;
+    }
+
+    .cover {
+      width: 100%;
+      height: 250px;
+
+      background: linear-gradient(135deg, #ff4d6d, #7b2cbf);
+      border-radius: 20px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 80px;
+    }
+
+    .song-info {
+      margin-top: 20px;
+    }
+
+    .song-name {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .artist {
+      margin-top: 6px;
+      color: #999;
+    }
+
+    .progress {
+      width: 100%;
+      height: 5px;
+      background: #444;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .progress-bar {
+      width: 35%;
+      height: 100%;
+      background: white;
+      border-radius: 10px;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    button {
+      border: none;
+      background: transparent;
+      color: white;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    .play {
+      width: 55px;
+      height: 55px;
+
+      border-radius: 50%;
+      background: white;
+      color: black;
+
+      font-size: 20px;
+    }
+  </style>
 </head>
 
 <body>
 
-    <button id="btn">OFF</button>
+  <div class="player">
 
-    <div class="box"></div>
+    <div class="cover">
+      🎵
+    </div>
 
-    <script>
-        const btn = document.querySelector("#btn");
-        const box = document.querySelector(".box");
+    <div class="song-info">
+      <div class="song-name">
+        Blinding Lights
+      </div>
 
-        let isOn = false;
+      <div class="artist">
+        The Weeknd
+      </div>
+    </div>
 
-        btn.addEventListener("click", () => {
+    <div class="progress">
+      <div class="progress-bar"></div>
+    </div>
 
-            isOn = !isOn;
+    <div class="controls">
 
-            if (isOn) {
-                btn.textContent = "ON";
-                box.classList.add("on");
-            } else {
-                btn.textContent = "OFF";
-                box.classList.remove("on");
-            }
+      <button id="prev">
+        ⏮
+      </button>
 
-        });
-    </script>
+      <button class="play" id="play">
+        ▶
+      </button>
+
+      <button id="next">
+        ⏭
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <script>
+
+    const player = document.querySelector(".player");
+
+    const play = document.querySelector("#play");
+
+
+    // Detect player resize
+    const observer = new ResizeObserver(() => {
+
+      console.log("Width:", player.offsetWidth);
+
+    });
+
+    observer.observe(player);
+
+
+    // Play / Pause
+    let isPlaying = false;
+
+    play.addEventListener("click", () => {
+
+      isPlaying = !isPlaying;
+
+      if (isPlaying) {
+
+        play.textContent = "⏸";
+
+      } else {
+
+        play.textContent = "▶";
+
+      }
+
+    });
+
+  </script>
 
 </body>
 </html>

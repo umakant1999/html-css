@@ -369,10 +369,10 @@
 // console.log(a)
 
 
-let name = ["john" ,"janam","ja"]
+// let name = ["john" ,"janam","ja"]
 
-let b =name.find((n)=>{
-    return n.includes("j")
-})
+// let b =name.find((n)=>{
+//     return n.includes("j")
+// })
 
-console.log(b)
+// console.log(b)
